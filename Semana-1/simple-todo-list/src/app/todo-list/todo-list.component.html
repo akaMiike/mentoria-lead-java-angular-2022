@@ -1,0 +1,18 @@
+<div id="input">
+    <input type="text" (change) = "setTarefa($event)" [value]="tituloTarefa">
+    <button (click)="adicionarTarefaLista()">Adicionar</button>
+</div>
+
+<div *ngIf="listaTarefas.length <= 0">Não possui tarefas cadastradas!</div>
+
+<div
+    [ngClass]="{
+        'vermelho': listaTarefas.length <= 2,
+        'verde': listaTarefas.length > 2 && listaTarefas.length <= 5,
+        'azul': listaTarefas.length > 5
+    }" 
+    *ngFor="let tarefa of listaTarefas"
+    >{{tarefa}}<button class = "remover" (click)="removerTarefa($event)">Remover tarefa</button>
+    <button class = "descer-tarefa" (click)="descerTarefa($event)">Descer</button>
+    <button class = "subir-tarefa" (click)="subirTarefa($event)">Subir</button>
+</div>

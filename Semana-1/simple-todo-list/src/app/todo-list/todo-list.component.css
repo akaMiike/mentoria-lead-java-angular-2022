@@ -1,0 +1,33 @@
+div {
+    padding: 5px;
+}
+
+.remover{
+    float: right;
+}
+
+.subir-tarefa{
+    float: right;
+}
+
+.descer-tarefa{
+    float: right;
+}
+
+.verde {
+    background-color: green;
+    margin: 5px;
+    padding:5px;
+}
+
+.vermelho {
+    background-color: red;
+    margin: 5px;
+    padding:5px;
+}
+
+.azul{
+    background-color: blue;
+    margin: 5px;
+    padding:5px;
+}
