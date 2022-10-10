@@ -59,7 +59,7 @@ export class TodoListComponent implements OnInit {
   descerTarefa(event: any){
     var index: number = this.listaTarefas.indexOf(event.path[1].childNodes[0].data);
     var temp: string = "";
-    if(index < this.listaTarefas.length){
+    if(index < this.listaTarefas.length-1){
       temp = this.listaTarefas[index+1];
       this.listaTarefas[index+1] = this.listaTarefas[index];
       this.listaTarefas[index] = temp;
