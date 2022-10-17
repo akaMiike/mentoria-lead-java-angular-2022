@@ -1,0 +1,16 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.formulario {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.elemento-form {
+    display: inline;
+    padding: 10px;
+}

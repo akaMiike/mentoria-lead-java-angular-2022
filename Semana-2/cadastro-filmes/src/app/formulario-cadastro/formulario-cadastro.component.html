@@ -1,0 +1,30 @@
+<h1 class="titulo">Cadastro de filmes</h1>
+
+<div class="formulario">
+    <form [formGroup] = "formulario">
+
+        <div class="elemento-form">
+            <label>Título: </label>
+            <input type="text" name="titulo" formControlName="titulo">
+        </div>
+
+        <div class="elemento-form">
+            <label>Gênero: </label>
+            <select name="select" name="genero" formControlName="generoSelecionado">
+                <option *ngFor="let genero of listaGeneros">{{genero}}</option>
+            </select>
+        </div>
+
+        <div class="elemento-form">
+            <label>Data de Lançamento: </label>
+            <input type="text" name="data" formControlName="dataLancamento" mask="00/00/0000" [dropSpecialCharacters]="false">
+        </div>
+
+        <button type="submit" [disabled]="formulario.invalid" (click)="salvarFilme()">Enviar</button>
+
+    </form>
+</div>
+
+<div class="tabelaFilmes">
+
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf="listaFilmesCadastrados.length == 0" class="divListaFilmesVazia">
+    <h1>Não existe nenhum filme cadastrado</h1>
+</div>    
+
+<div *ngIf="listaFilmesCadastrados.length != 0">
+    <table class="center">
+        <tr>
+          <th>Nome</th>
+          <th>Gênero</th>
+          <th>Data de Lançamento</th>
+        </tr>
+        <tr *ngFor="let item of listaFilmesCadastrados">
+            <td>{{item.nome}}</td>
+            <td>{{item.genero}}</td>
+            <td>{{item.dataLancamento}}</td>
+        </tr>
+      </table>
+</div>
